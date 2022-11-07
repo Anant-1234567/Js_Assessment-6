@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+</head>
+<body>
+    <h1>Handson-6</h1>
+    <h1>Problem solving</h1>
+    Q1. Find the Smaller Angle?<br><br>
+        Ans:-<br>
+        <pre>
+        var Minimal_Angle = (h, m) =>{
+
+            const minuteAngle = m * 6;
+            const hourAngle = (h * 30) + (m * 0.5);
+            const angle = Math.abs(hourAngle - minuteAngle);
+            return Math.min(angle, 360 - angle);
+        };
+        </pre>
+         
+    
+Q2. Check whether the year is Leap year or not?<br><br>
+        Ans:-<br>
+        <pre>
+        var Check_Leap = (year) => {
+         
+          if ( year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+            return "Leap Year";
+          }
+          else{
+              return "Non Leap Year";
+          }
+        
+        };
+        </pre>
+    
+Q3. Perfect Number Check?<br><br>
+        Ans:-<br>
+        <pre>
+         var Perfect_Check = (N) => {        
+          
+          var count = 0;
+            for(var i = 0; i < N; i++){
+              
+            if(N % i === 0){
+                count = count + i;
+            }
+            }
+            if(count == N)
+              {
+              return "YES";
+              }
+              else
+              {
+              return "NO";
+                    
+              }
+        };
+        </pre>
+    
+Q4. Reverse a Number?<br><br>
+
+        Ans:-<br>
+        <pre>
+        var Reverse_Number = (N) => {
+
+          N = N + "";
+          var b =  parseFloat((N.split('').reverse().join('')));
+          return b;
+        
+        };
+        </pre>
+         
+    
+Q5. Substring Check?<br><br>
+        Ans:-<br>
+        <pre>
+        var Substring_Check = (S1, S2) => {
+
+            if (S1.includes(S2)){
+            return "YES";
+            }
+            else{
+                return "NO";
+        
+              }
+        };
+        </pre>
+         
+    
+    
+</body>
+</html>
